@@ -1,0 +1,4 @@
+touch file{1..10}.txt
+rm file{1..5}.txt
+
+The system log file of Linux is stored in /etc/syslog or /etc/syslogd 

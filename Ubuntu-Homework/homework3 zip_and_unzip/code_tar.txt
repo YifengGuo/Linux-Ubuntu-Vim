@@ -1,0 +1,5 @@
+$ cd Documents/Ubuntu Study/Ubuntu-Homework/homework3 zip_and_unzip$ tar -zcvf tar_practice ~/Documents/Ubuntu\ Study/Ubuntu-Homework/homework3\ zip_and_unzip/
+$ tar -zcvf tar_practice.tar ~/Documents/Ubuntu Study/Ubuntu-Homework/homework3 zip_and_unzip$ tar -zcvf tar_practice ~/Documents/Ubuntu\ Study/Ubuntu-Homework/homework3\ zip_and_unzip/target\ to\ tar/
+
+# depkg for tar to customed dir
+$ tar -zxvf xxx.tar -C

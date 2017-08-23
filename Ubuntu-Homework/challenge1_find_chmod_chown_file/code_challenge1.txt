@@ -11,4 +11,4 @@
 $ sudo find Documents -name sources.list
 $ cd Documents/Ubuntu\ Study/Ubuntu-Homework/challenge1_find_chmod_chown_file/
 $ sudo chown yifengguo sources.list
-$ sudo chmod 700 sources.list
+$ sudo chmod 600 sources.list

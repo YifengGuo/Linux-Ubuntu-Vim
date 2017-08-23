@@ -1,0 +1,14 @@
+# challenge: You forget the detailed location of a very important file(sources.list)
+# and you can only remember that the file is in the Documents/, and now you have to find
+# this file out and set the file can only be accessed by yourself and anyone else cannot.
+
+# target :
+# 1. find out the sources.list
+# 2. change the owner of file to yourself
+# 3. change the access authority to only you can write and read
+
+
+$ sudo find Documents -name sources.list
+$ cd Documents/Ubuntu\ Study/Ubuntu-Homework/challenge1_find_chmod_chown_file/
+$ sudo chown yifengguo sources.list
+$ sudo chmod 700 sources.list

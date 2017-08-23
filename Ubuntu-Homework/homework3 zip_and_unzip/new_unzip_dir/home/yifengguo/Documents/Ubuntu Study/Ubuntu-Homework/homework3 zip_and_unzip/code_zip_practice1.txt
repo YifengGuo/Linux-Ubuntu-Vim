@@ -1,0 +1,13 @@
+$ cd Documents/Ubuntu\ Study/Ubuntu-Homework/homework3\ zip_and_unzip/
+$ zip -r -q -o zip_practice1.zip ~/Documents/Ubuntu\ Study/Ubuntu-Homework/homework3\ zip_and_unzip/
+$ du -h zip_practice1.zip
+$ file zip_practice1.zip
+
+# set package level 1~9 and ignore existed .zip files
+$ zip -r -9 -q -o zip_practice1_9.zip ~/Documents/Ubuntu\ Study/Ubuntu-Homework
+/homework3\ zip_and_unzip/ -x ~/*.zip
+
+# zip encrypt file with password
+$ zip -r -e -o zip_practice1_encryption.zip ~/Documents/Ubuntu\ Study/Ubuntu-Ho
+mework/homework3\ zip_and_unzip/
+

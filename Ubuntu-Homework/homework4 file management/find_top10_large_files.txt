@@ -1,0 +1,5 @@
+$ du -a ~/ -h | sort -r -n | head -n 10
+# du estimate file space usage -a: --all, -h : human-readable
+# sort : sort the result, -r reverse the result, -n compare by numeric
+# head: output the first part of the files
+        -n, --lines print the first NUM lines instead of the first 10; 

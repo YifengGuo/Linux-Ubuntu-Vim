@@ -1,0 +1,2 @@
+# find all the .sh files in /etc/
+sudo locate /etc/sh

@@ -1,0 +1,31 @@
+# start rsyslog to allow us to know if our task is being executed via log info
+$ sudo service rsyslog start
+# manually start crontab. By default crontab is started in ubuntu
+$ sudo cron -f &
+
+# append a new task using crontab
+$ crontab -e
+# choose 1st option using vim
+# append task content at the bottom line of file
+*/1 * * * * touch /home/shiyanlou/$(date +\%Y\%m\%d\%H\%M\%S)
+# \% is to transfer meaning of '%' for % has special meaning in crontab cmd 
+
+# after appending we will get a prompt saying installing new crontab
+
+# to see tasks appended
+$ crontab -l
+
+# Although we have appended task, if the daemon has not started, it cannot monitor task and cannot execute the task for us either.
+# To make sure if cron has been successfully running backgroud
+$ ps aux | grep cron
+OR
+$ pgrep cron
+
+# to examine the feedback of task after being executed from log info
+$ sudo tail -f /var/log/syslog
+
+
+# to remove cron
+$ crontab -r
+
+# tips: when every user type crontab -e to append task, this opreation will always initialize a task document for each user in /var/spool/cron/crontabs to separate the tasks.

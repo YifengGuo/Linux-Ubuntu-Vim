@@ -1,0 +1,6 @@
+# To synchronize time zone with windows on ubuntu 16.04
+
+# update time to avoid time error
+$ sudo apt-get install ntpdate<br>sudo ntpdate time.windows.com
+# update time on the hardware
+$ sudo hwclock --localtime --systohc

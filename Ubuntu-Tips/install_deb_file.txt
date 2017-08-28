@@ -1,0 +1,3 @@
+how to install .deb file on ubuntu
+$ sudo dpkg -i <Path to .deb file>
+$ sudo apt-get install -f

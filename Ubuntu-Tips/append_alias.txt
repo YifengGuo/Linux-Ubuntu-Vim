@@ -1,0 +1,4 @@
+# to append customized alias on ubuntu
+$ vim ~/.bash_aliases
+# then append your alias in that text file and update
+$ source ~/.bash_aliases

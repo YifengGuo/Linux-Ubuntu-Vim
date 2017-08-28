@@ -1,0 +1,16 @@
+# help only works for internal command
+example:
+$ help cd
+$ help exit
+# if the command is external one, it 
+# usually has --help param
+$ ls --help
+
+
+# man is valid for both internal and external command
+$ man ls
+$ man cd
+
+
+# info is more detailed than man
+$ info ls

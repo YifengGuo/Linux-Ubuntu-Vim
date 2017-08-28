@@ -15,7 +15,8 @@ $ crontab -e
 # to see tasks appended
 $ crontab -l
 
-# Although we have appended task, if the daemon has not started, it cannot monitor task and cannot execute the task for us either.
+# Although we have appended task, if the daemon has not started, 
+# it cannot monitor task and cannot execute the task for us either.
 # To make sure if cron has been successfully running backgroud
 $ ps aux | grep cron
 OR
@@ -28,4 +29,6 @@ $ sudo tail -f /var/log/syslog
 # to remove cron
 $ crontab -r
 
-# tips: when every user type crontab -e to append task, this opreation will always initialize a task document for each user in /var/spool/cron/crontabs to separate the tasks.
+# tips: when every user type crontab -e to append task, this opreation will always 
+# initialize a task document for each user in /var/spool/cron/crontabs to separate 
+# the tasks.

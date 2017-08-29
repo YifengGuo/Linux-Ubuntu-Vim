@@ -4,3 +4,5 @@ $ git config credential.helper store
 $ git push <repo url.git>
 input username
 input password
+
+test...

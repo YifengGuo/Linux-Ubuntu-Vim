@@ -1,0 +1,6 @@
+# This code could permanently anthenticate with certain git repos
+# without typing in username and password everytime when pushing
+$ git config credential.helper store
+$ git push <repo url.git>
+input username
+input password

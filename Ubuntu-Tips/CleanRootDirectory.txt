@@ -1,5 +1,0 @@
-# when /boot occurs space insufficiency problem, we can apply opreations below t# -o delete useless image files in /root to clean the space
-$ dpkg --get-selections | grep linux
-$ sudo apt-get remove linux-image-(version)
-# if deletion is not totally
-$ sudo apt-get autoremove

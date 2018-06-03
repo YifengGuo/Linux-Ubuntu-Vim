@@ -150,13 +150,14 @@ Search Path:
     then shell locates command who by searching through Linux durectories in $PATH
     $ echo $PATH
     /usr/local/bin:/bin:/usr/bin
-    and looks for who command in each of these directories. If it finds (/usr/bin/who), then it runs the command.
+    and looks for who command in each of these directories. 
+    If it finds (/usr/bin/who), then it runs the command.
     Otherwise, reports failure like bash: who: command not found
     
     Temporarily add directory into $PATH: only works on current shell
         $ PATH=$PATH:/usr/sbin
     
     Permanently add directory into $PATH:
-        modify the PATH variable in the startup file: ~/.bashrc (or ~/.bash_profile) and then log out and log in
-        or simply $ source ~/.bashrc
+        modify the PATH variable in the startup file: ~/.bashrc (or ~/.bash_profile) and then log out 
+        and log in or simply $ source ~/.bashrc
 ```

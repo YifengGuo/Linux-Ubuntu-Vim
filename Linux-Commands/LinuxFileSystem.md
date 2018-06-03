@@ -1,6 +1,6 @@
 # Linux File System
 
-####File System Basics
+#### File System Basics
 
 ```
 / root directory
@@ -59,7 +59,7 @@ Explanation on the ownership:
     position                meaning:
     1                       File type: - : file
                                        d : directory
-                                       l : symbolic link
+                                       l : symbolic link (reference)
                                        p : named pipe
                                        c : character device
                                        b : block device
@@ -97,7 +97,7 @@ cd is a shell builtin
 ```
 ```
 Wildcard
-	$ ls a*
+    $ ls a*
     the shell first expands a* into the filenames that begins with "a" in the current directory.
     * IMPORTANT *:
     	ls never knows you used a wildcard: it sees only the final list of filenames after the 
@@ -125,4 +125,38 @@ Wildcard          Meaning
 [!set] = [^set]
 
 {X, YY, ZZZ}      First match X, then YY, then ZZZ
+```
+```
+Variable
+    $ MYVAR=3    # to assign a variable
+    $ echo MYVAR
+    3
+
+    The scope of variable, by default, is the shell which it is defined.
+    So to make the variable and its value available to other programs your shell invokes, use export command:
+    $ export MYVAR
+    now MYVAR is called environment variable which is available to other programs in your shell's environment
+
+    $ printenv
+    get all the environment variables of this linux system
+```
+
+```
+Search Path:
+    Programs are scattered all over the Linux FileSystem. How does shell find the program you invoke via shell?
+    Variable PATH is critical.
+    
+    $ who
+    then shell locates command who by searching through Linux durectories in $PATH
+    $ echo $PATH
+    /usr/local/bin:/bin:/usr/bin
+    and looks for who command in each of these directories. If it finds (/usr/bin/who), then it runs the command.
+    Otherwise, reports failure like bash: who: command not found
+    
+    Temporarily add directory into $PATH: only works on current shell
+        $ PATH=$PATH:/usr/sbin
+    
+    Permanently add directory into $PATH:
+        modify the PATH variable in the startup file: ~/.bashrc (or ~/.bash_profile) and then log out and log in
+        or simply $ source ~/.bashrc
 ```

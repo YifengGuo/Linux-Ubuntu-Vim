@@ -102,3 +102,25 @@ cmd [options] [files]
     $ head file
     $ head file* | less    # previewing multiple files and show it by one page each time
 ```
+
+```
+tail
+The tail command prints the last 10 lines of a file. 
+$ nl myfile | tail # print the last 10 lines of a file and its linenumber
+
+-f option causes tail to watch a file actively while another program is writing to it, 
+displaying new lines as they are written. This is invaluable for watching a Linux log file
+in active use as other programs write to it:
+    $ tail -f /var/log/syslog
+```
+
+```
+File Creation and Editing
+nano
+emacs    +  new_file
+vim
+
+$ touch new_file
+
+$ echo anything > new_file
+```

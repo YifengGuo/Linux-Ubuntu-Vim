@@ -1,0 +1,5 @@
+test_commands/test_dir1/1.txt
+test_commands/test_dir1/2.txt
+test_commands/test_dir1/test_dir12/12.txt
+test_commands/test_dir2/22.txt
+test_commands/test_dir3/33.txt

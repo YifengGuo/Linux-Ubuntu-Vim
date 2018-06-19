@@ -49,14 +49,14 @@ Useful options:
 	                       SHELL AND PASSED LITERALLY TO FIND). Paths are relative to the 
 	                       directory tree being searched
 	
-	-type t                locate only files of type t: 
-    -type f     :     files
-    -type d     :     directories
-    -type l     :     symbolic link
-    -type b     :     block devices
-    -type c     :     character devices
-    -type p     :     named pipes
-    -type s     :     sockets
+    -type t locate only files of type t: 
+        -type f     :     files
+        -type d     :     directories
+        -type l     :     symbolic link
+        -type b     :     block devices
+        -type c     :     character devices
+        -type p     :     named pipes
+        -type s     :     sockets
                             
 	-atime N      \    File was last accessed(-atime), last modified(-mtime) or had status
 	-ctime N     --->  change(-ctime) exactly N*24 hours ago. Use +N for "greater than N",

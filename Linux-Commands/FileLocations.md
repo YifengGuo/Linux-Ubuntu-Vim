@@ -50,13 +50,13 @@ Useful options:
 	                       directory tree being searched
 	
 	-type t                locate only files of type t: 
-                           -type f     :     files
-                           -type d     :     directories
-                           -type l     :     symbolic link
-                           -type b     :     block devices
-                           -type c     :     character devices
-                           -type p     :     named pipes
-                           -type s     :     sockets
+    -type f     :     files
+    -type d     :     directories
+    -type l     :     symbolic link
+    -type b     :     block devices
+    -type c     :     character devices
+    -type p     :     named pipes
+    -type s     :     sockets
                             
 	-atime N      \    File was last accessed(-atime), last modified(-mtime) or had status
 	-ctime N     --->  change(-ctime) exactly N*24 hours ago. Use +N for "greater than N",
@@ -212,7 +212,8 @@ As a built-in shell command, type is faster than which; however, it’s availabl
 whereis
 whereis [options] files
 whereis attempts to locate the given files by searching a hardcoded list of directories.
-It can find executubles, documentation, and source code. However it is not recommended to use whereis for its list of directories might not include the ones you need.
+It can find executubles, documentation, and source code. 
+However it is not recommended to use whereis for its list of directories might not include the ones you need.
 
 $ whereis vim
 /usr/bin/vim

@@ -202,3 +202,19 @@ This command line produces the sorted output of who on screen, but also writes t
 -a         Append instead of overwriting  les.
 ```
 
+
+
+```
+awk
+AWK is a pattern-matching language. It matches data by regular expression and then performs actions based on the data. Here are a few simple examples for processing a text file, myfile.
+
+Print the second and fourth word on each line:
+$ awk '{print $2, $4}' myfile
+
+Print all lines that are shorter than 60 characters:
+$ awk 'length < 60 {print}' myfile
+
+Switch two fields on the same line and print
+$ awk '{print $2" "$1}'
+```
+

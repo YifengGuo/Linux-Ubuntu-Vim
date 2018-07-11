@@ -135,6 +135,70 @@ sort [options] [files]
 
 The sort command prints lines of text in alphabetical order, or sorted by some other rule you specify. All provided files are concatenated, and the result is sorted and printed.
 
+-f          Case-insensitive sorting
 
+-n          Sort numerically (i.e., 9 comes before 10) instead of
+
+            alphabetically (10 comes before 9 because it begins with '1')
+-g          Sort numerically by scientific notation
+            (7.4e3 means “7.4 times ten to the third power,” or 7400)
+            
+-u          Unique sort: ignore duplicate lines.
+
+-b          Ignore leading whitespace in lines.
+
+
+
+```
+
+
+
+```
+uniq
+uniq [options] [files]
+
+The uniq command operates on consecutive, duplicate lines of
+text. For example, if you have a file my letter2:
+    $ cat letters2 
+    a
+    b
+    b
+    c 
+    b
+then uniq would detect and process (in whatever way you spec‐ ify) the two consecutive b’s, but not the third b:
+    $ uniq letters2 
+    a
+    b
+    c
+    b
+$ sort letters2 | uniq 
+a
+b
+c 
+In this case, only a single b remains because all three were made adjacent by sort, then collapsed to one by uniq. Also, you can count duplicate lines instead of eliminating them: which could be applied in word count
+→ sort letters2 | uniq -c 
+1 a
+3 b 
+1 c
+
+-c           Count adjacent duplicate lines.
+```
+
+
+
+```
+tee 
+tee [options] files
+Like the cat command, the tee command copies standard input to standard output unaltered. Simultaneously, however, it also copies that same standard input to one or more files. tee is most often found in the middle of pipelines, writing some intermediate data to a file while also passing it to the next com‐ mand in the pipeline:
+
+$ who | tee original_who | sort
+barrett   pts/1 Sep 22 21:15
+byrnes    pts/0 Sep 15 13:51
+silver    :0    Sep 23 20:44
+silver    pts/2 Sep 22 21:18
+
+This command line produces the sorted output of who on screen, but also writes the original, unsorted output of who to the file original_who, and then passes along that same output to the rest of the pipe‐ line (sort), producing sorted output on screen.
+
+-a         Append instead of overwriting  les.
 ```
 
